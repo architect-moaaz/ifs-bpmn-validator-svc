@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:drools="http://www.jboss.org/drools" id="_6eNTQCurEDul9uSz_TaYYQ" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:collaboration id="_4433E382-E691-4260-BAB9-310E568ABE67" name="Default Collaboration">
+    <bpmn2:participant id="_D2CD6769-7A92-47D9-A7CC-58716B92FA5E" name="Pool Participant" processRef="valid"/>
+  </bpmn2:collaboration>
+  <bpmn2:process id="valid" drools:packageName="com.example" drools:version="1.0" drools:adHoc="false" name="valid" isExecutable="true" processType="Public">
+    <bpmn2:startEvent id="Event">
+      <bpmn2:conditionalEventDefinition>
+        <bpmn2:condition xsi:type="bpmn2:tFormalExpression" language="http://www.jboss.org/drools/rule"/>
+      </bpmn2:conditionalEventDefinition>
+    </bpmn2:startEvent>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="valid">
+      <bpmndi:BPMNShape id="shape_Event" bpmnElement="Event">
+        <dc:Bounds height="56" width="56" x="59" y="44"/>
+      </bpmndi:BPMNShape>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters/>
+          <bpsim:ElementParameters elementRef="Event">
+            <bpsim:TimeParameters>
+              <bpsim:ProcessingTime>
+                <bpsim:NormalDistribution mean="0" standardDeviation="0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_6eNTQCurEDul9uSz_TaYYQ</bpmn2:source>
+    <bpmn2:target>_6eNTQCurEDul9uSz_TaYYQ</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>

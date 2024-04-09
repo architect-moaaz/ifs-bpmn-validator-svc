@@ -1,0 +1,16 @@
+{
+  "extends": "bpmnlint:recommended",
+  "rules": {
+    "label-required": "off",
+    "no-bpmndi": "off",
+    "naming":"off",
+    "no-inclusive-gateway":"off",
+    "task-type-not-specified":"off",
+    "inclusive-gateway-condition":"off"
+    
+    
+    
+    
+   
+}
+}
